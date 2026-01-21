@@ -33,29 +33,52 @@
         </a>
       </div>
 
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-gray-700 focus:outline-none">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
     </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden flex-col space-y-4 mt-4 pb-4">
+      <a href="#proyecto" class="block px-2 py-2 hover:bg-gray-200 rounded">El proyecto</a>
+      <a href="#ritmos" class="block px-2 py-2 hover:bg-gray-200 rounded">Ritmos Nómadas</a>
+      <a href="#talleres" class="block px-2 py-2 hover:bg-gray-200 rounded">Talleres</a>
+      <a href="#comunidad" class="block px-2 py-2 hover:bg-gray-200 rounded">Comunidad</a>
+      <a href="#contacto" class="block bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition">
+        Contacto
+      </a>
+    </div>
+
   </div>
 </nav>
 
+<script>
+  // Toggle mobile menu
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
 <!-- ===================== HERO ===================== -->
 <section id="inicio" class="relative h-screen text-white">
-    
   <img src="assets/hero.png" class="absolute inset-0 w-full h-full object-cover">
-
   <div class="absolute inset-0 bg-black/60 flex items-center justify-center">
     <div class="text-center px-4 max-w-3xl">
-      <!-- Logo grande -->
       <img src="assets/logo-blanco.png" class="mx-auto mb-6 w-64">
-
-      <h1 class="text-4xl md:text-6xl font-bold mb-6">
-        Ritmo, comunidad y creación
-      </h1>
-
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">Ritmo, comunidad y creación</h1>
       <p class="text-xl md:text-2xl mb-8">
         Proyectos culturales y educativos que nacen del cuerpo,  
         se expanden en colectivo y transforman territorios.
       </p>
-
       <a href="#contacto"
          class="inline-block bg-orange-600 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-orange-700 transition">
         Hablemos de tu idea
@@ -67,48 +90,30 @@
 <!-- ===================== QUÉ ES PROYECTOS NÓMADAS ===================== -->
 <section id="proyecto" class="py-20 max-w-7xl mx-auto px-4">
   <div class="grid md:grid-cols-2 gap-12 items-center">
-
-    <!-- Texto -->
     <div>
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">
-        ¿Qué es Proyectos Nómadas?
-      </h2>
-
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Qué es Proyectos Nómadas?</h2>
       <p class="mb-4 text-lg">
         Proyectos Nómadas es un proyecto cultural itinerante que utiliza
         el ritmo, el arte, la naturaleza y la creación colectiva como
         herramientas de empoderamiento, cohesión social y transformación comunitaria.
       </p>
-
       <p class="mb-4 text-lg">
         Nace desde lo rural, desde los pueblos y desde la necesidad de
         generar espacios vivos, accesibles y humanos donde encontrarnos,
         expresarnos y construir juntas.
       </p>
-
-      <p class="text-lg font-semibold">
-        Cada propuesta se adapta al territorio, al colectivo y al momento.
-      </p>
+      <p class="text-lg font-semibold">Cada propuesta se adapta al territorio, al colectivo y al momento.</p>
     </div>
-
-    <img src="assets/proyecto.png" class="rounded-xl shadow-lg">
+    <img src="assets/proyecto.png" class="rounded-xl shadow-lg w-full h-auto">
   </div>
 </section>
 
 <!-- ===================== RITMOS NÓMADAS ===================== -->
 <section id="ritmos" class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4">
-
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
-      Ritmos Nómadas
-    </h2>
-
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Ritmos Nómadas</h2>
     <div class="grid md:grid-cols-2 gap-12 items-center">
-
-   
-      <img src="assets/ritmos.png" class="rounded-xl shadow-lg">
-
-      <!-- Texto -->
+      <img src="assets/ritmos.png" class="rounded-xl shadow-lg w-full h-auto">
       <div>
         <p class="text-lg mb-4">
           Ritmos Nómadas es el corazón musical del proyecto.
@@ -116,13 +121,11 @@
           que lleva el ritmo a pueblos, centros educativos, asociaciones
           y encuentros culturales.
         </p>
-
         <p class="text-lg mb-4">
           La percusión brasileña es energía, cuerpo, presencia y unión.
           No hace falta experiencia previa: el grupo sostiene,
           el ritmo aparece y la fuerza colectiva se activa.
         </p>
-
         <p class="text-lg font-semibold">
           Ritmo como lenguaje común.  
           Ritmo como herramienta de empoderamiento.
@@ -134,98 +137,62 @@
 
 <!-- ===================== TALLERES ===================== -->
 <section id="talleres" class="py-20 max-w-7xl mx-auto px-4">
-  <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
-    Talleres y experiencias
-  </h2>
-
+  <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Talleres y experiencias</h2>
   <div class="grid md:grid-cols-3 gap-8">
-
-    <!-- Taller 1 -->
     <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-     
       <img src="assets/taller-ritmo.png" class="h-48 w-full object-cover">
       <div class="p-6">
         <h3 class="text-xl font-bold mb-2">Ritmo y cuerpo</h3>
-        <p>
-          Batucada, percusión corporal y escucha activa.
-          El cuerpo como instrumento y el grupo como motor.
-        </p>
+        <p>Batucada, percusión corporal y escucha activa. El cuerpo como instrumento y el grupo como motor.</p>
       </div>
     </div>
-
-    <!-- Taller 2 -->
     <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-      <!-- Buscar: taller educación ambiental niños -->
       <img src="assets/taller-naturaleza.png" class="h-48 w-full object-cover">
       <div class="p-6">
         <h3 class="text-xl font-bold mb-2">Naturaleza viva</h3>
-        <p>
-          Talleres para conectar con la naturaleza:  plantas, aves, insectos y biodiversidad.
-          Aprender haciendo y dejando huella real.
-        </p>
+        <p>Talleres para conectar con la naturaleza: plantas, aves, insectos y biodiversidad. Aprender haciendo y dejando huella real.</p>
       </div>
     </div>
-
-    <!-- Taller 3 -->
     <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-     
       <img src="assets/taller-arte.jpg" class="h-48 w-full object-cover">
       <div class="p-6">
         <h3 class="text-xl font-bold mb-2">Creación y arte</h3>
-        <p>
-          Collage natural, alambre, pintura y creación consciente.
-          Expresión personal desde lo simple y lo colectivo.
-        </p>
+        <p>Collage natural, alambre, pintura y creación consciente. Expresión personal desde lo simple y lo colectivo.</p>
       </div>
     </div>
-
   </div>
 </section>
 
 <!-- ===================== COMUNIDAD Y TERRITORIO ===================== -->
 <section id="comunidad" class="py-20 bg-gray-200">
   <div class="max-w-7xl mx-auto px-4 text-center">
-
-    <h2 class="text-3xl md:text-4xl font-bold mb-6">
-      Territorio y comunidad
-    </h2>
-
+    <h2 class="text-3xl md:text-4xl font-bold mb-6">Territorio y comunidad</h2>
     <p class="text-lg max-w-3xl mx-auto mb-8">
       Nuestro corazón nace en Sierra de Gata, pero llevamos la cultura y la creatividad allá donde se nos llame.
       Trabajamos en cualquier territorio, siempre con la misma pasión y compromiso.
     </p>
-
-    <img src="assets/comunidad.jpg" class="mx-auto rounded-xl shadow-lg max-w-4xl">
+    <img src="assets/comunidad.jpg" class="mx-auto rounded-xl shadow-lg w-full h-auto max-w-xl">
   </div>
 </section>
 
 <!-- ===================== CONTACTO ===================== -->
 <section id="contacto" class="py-20 max-w-7xl mx-auto px-4 text-center">
-  <h2 class="text-3xl md:text-4xl font-bold mb-6">
-    ¿Creamos algo juntas?
-  </h2>
-
+  <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Creamos algo juntas?</h2>
   <p class="text-lg mb-8 max-w-2xl mx-auto">
     Si tienes una idea, un espacio o una necesidad,
     podemos darle forma y ritmo.  
     Escríbeme o llámame sin compromiso.
   </p>
-
   <div class="flex flex-col md:flex-row justify-center items-center gap-4 mb-8">
-
-    <!-- Email -->
     <a href="mailto:proyectosnomadas.info@gmail.com"
        class="bg-orange-600 text-white px-6 py-3 rounded-xl text-lg font-semibold hover:bg-orange-700 transition">
       📧 Escríbeme por email
     </a>
-
-    <!-- WhatsApp -->
     <a href="https://wa.me/34655169425" target="_blank"
        class="bg-green-600 text-white px-6 py-3 rounded-xl text-lg font-semibold hover:bg-green-700 transition">
       💬 Escríbeme por WhatsApp
     </a>
   </div>
-
   <p class="text-lg font-semibold">
     📞 Teléfono: <a href="tel:+34655169425" class="text-orange-600 hover:underline">655 169 425</a>
   </p>
@@ -242,3 +209,4 @@
 
 </body>
 </html>
+
